@@ -1,4 +1,4 @@
-# Changes in echo kernel
+# Changes in odoo kernel
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 

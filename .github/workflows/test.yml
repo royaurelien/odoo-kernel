@@ -43,7 +43,7 @@ jobs:
       - name: Check Kernel
         run: |
           cd $HOME
-          jupyter kernelspec list | grep echo
+          jupyter kernelspec list | grep odoo
 
   check_release:
     runs-on: ubuntu-latest

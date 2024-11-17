@@ -5,15 +5,15 @@ requires = [
 build-backend = "hatchling.build"
 
 [project]
-name = "echo-kernel"
+name = "odoo-kernel"
 dynamic = [
     "version",
 ]
-description = "Simple example kernel for Jupyter"
+description = "Odoo kernel for Jupyter"
 readme = "README.rst"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Jupyter Development Team", email = "jupyter@googlegroups.com" },
+    { name = "Aurelien ROY", email = "roy.aurelien@gmail.com" },
 ]
 classifiers = [
     "Intended Audience :: Developers",
@@ -24,6 +24,7 @@ requires-python = ">=3.8"
 dependencies = [
     "ipykernel",
     "jupyter_client",
+    "odoo-cli @ git+https://github.com/royaurelien/odoo-cli.git@v0.3.0",
 ]
 
 [project.optional-dependencies]
@@ -32,19 +33,23 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jupyter/echo_kernel"
+Homepage = "https://github.com/royaurelien/odoo-kernel"
 
 [tool.hatch.version]
-path = "echo_kernel/__init__.py"
+path = "odoo_kernel/__init__.py"
 
 # Used to call hatch_build.py
 [tool.hatch.build.hooks.custom]
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "/echo_kernel",
+    "/odoo_kernel",
 ]
 
 [tool.hatch.build.targets.wheel.shared-data]
 "data_kernelspec/share" = "share"
+
